@@ -6,6 +6,8 @@ import CreateArticle from './components/CreateArticle';
 import ShowArticleList from './components/ShowArticleList';
 import ShowArticleDetails from './components/ShowArticleDetails';
 import UpdateArticleInfo from './components/UpdateArticleInfo';
+import ArticleSearch from './components/Search1';
+
 class App extends Component {
   render() {
     return (
@@ -15,10 +17,11 @@ class App extends Component {
           <Route path='/create-article' component={CreateArticle} />
           <Route path='/edit-article/:id' component={UpdateArticleInfo} />
           <Route path='/show-article/:id' component={ShowArticleDetails} />
+          <Route path='/search-article' component={ArticleSearch} />
         </div>
       </Router>
     );
   }
 }
 
-export default App; //change
+export default App;
