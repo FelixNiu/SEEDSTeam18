@@ -17,7 +17,7 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ extended: true }));
 
 // use Routes
-app.use('/api/articles', articles);
+app.use(articles);
 
 const port = process.env.PORT || 5000;
 
