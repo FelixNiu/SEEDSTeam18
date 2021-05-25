@@ -6,20 +6,17 @@ const ArticleSchema = new mongoose.Schema({
   },
   author: {
     type: String,
-    required: true
   },
   published_date: {
-    type: Date,
-    required: true
+    type: String,
   },
   credibity_rating: {
     type: Number,
-    required: true
   },
   SE_method: {
     type: String
   },
-  reasearch_method: {
+  claims: {
     type: String
   },
   updated_date: {

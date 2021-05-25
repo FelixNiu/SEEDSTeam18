@@ -320,7 +320,7 @@ function filterGreaterThan(rows, id, filterValue) {
     return rowValue >= filterValue;
   });
 }
-filterGreaterThan.autoRemove = (val) => typeof val !== "number";
+filterGreaterThan.autoRemove = (val) => typeof val !== "Publish_date";
 
 function ArticleSearch() {
   const [data, setData] = useState([]);
@@ -344,10 +344,9 @@ function ArticleSearch() {
         filter: "fuzzyText",
       },
       {
-        Header: "Date",
-        accessor: "publish_date",
-        Filter: SliderColumnFilter,
-        filter: filterGreaterThan, // accessor is the "key" in the data
+        Header: "Published_date",
+        accessor: "published_date",
+        filter: "ffuzzyText", // accessor is the "key" in the data
       },
       {
         Header: "Credibity_rating",
@@ -357,12 +356,12 @@ function ArticleSearch() {
       },
       {
         Header: "SE_method:",
-        accessor: "SE_method:",
+        accessor: "SE_method",
         filter: "fuzzyText", // accessor is the "key" in the data
       },
       {
-        Header: "Search_method",
-        accessor: "reasearch_method",
+        Header: "Claim",
+        accessor: "claim",
         filter: "fuzzyText", // accessor is the "key" in the data
       },
     ],
@@ -370,15 +369,19 @@ function ArticleSearch() {
   );
 
   return (
-    <div className="SearchArticleList">
+    <div className="SearchArticle">
       <div className="container">
         <div className="row">
           <div className="col-md-12">
             <br />
             <h2 className="display-4 text-center">Search Articles</h2>
           </div>
+         
 
           <div className="col-md-11">
+              <Link to="/" className="btn btn-outline-warning float-left">
+                  Show Article List
+              </Link>
             <Link
               to="/create-article"
               className="btn btn-outline-warning float-right"
@@ -390,7 +393,7 @@ function ArticleSearch() {
             <hr />
           </div>
         </div>
-        <div>
+        <div id="ArticleSearch">
           <Styles>
             <Table columns={columns} data={data} />
           </Styles>

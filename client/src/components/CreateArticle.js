@@ -13,7 +13,7 @@ class CreateArticle extends Component {
       published_date:'',
       credibity_rating:'',
       SE_method: '',
-      reasearch_method:''
+      claim:''
     };
   }
 
@@ -30,7 +30,7 @@ class CreateArticle extends Component {
       published_date: this.state.published_date,
       credibity_rating: this.state.credibity_rating,
       SE_method: this.state.SE_method,
-      reasearch_method: this.state.reasearch_method
+      claim: this.state.claim
     };
 
     axios
@@ -42,7 +42,7 @@ class CreateArticle extends Component {
           published_date:'',
           credibity_rating:'',
           SE_method: '',
-          reasearch_method:''
+         claim:''
         })
         this.props.history.push('/');
       })
@@ -94,7 +94,7 @@ class CreateArticle extends Component {
 
                 <div className='form-group'>
                   <input
-                    type='date'
+                    type='text'
                     placeholder='published_date'
                     name='published_date'
                     className='form-control'
@@ -130,10 +130,10 @@ class CreateArticle extends Component {
                 <div className='form-group'>
                   <input
                     type='text'
-                    placeholder='Reasearch method'
-                    name='reasearch_method'
+                    placeholder='Claim'
+                    name='claim'
                     className='form-control'
-                    value={this.state.reasearch_method}
+                    value={this.state.claim}
                     onChange={this.onChange}
                   />
                 </div>
