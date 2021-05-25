@@ -14,10 +14,12 @@ connectDB();
 app.use(cors({ origin: true, credentials: true }));
 
 // Init Middleware
-app.use(express.json({ extended: true }));
+app.use(express.json({ extended: false }));
+
+app.get('/', (req, res) => res.send('client'));
 
 // use Routes
-app.use(articles);
+app.use('/api/articles', articles);
 
 const port = process.env.PORT || 5000;
 
