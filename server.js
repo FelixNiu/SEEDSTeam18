@@ -16,7 +16,8 @@ app.use(cors({ origin: true, credentials: true }));
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => res.send('client'));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
+
 
 // use Routes
 app.use('/api/articles', articles);
