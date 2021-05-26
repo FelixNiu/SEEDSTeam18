@@ -1,6 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 var cors = require('cors');
+const path=require('path');
 
 // routes
 const articles = require('./routes/api/articles');
@@ -14,10 +15,12 @@ connectDB();
 app.use(cors({ origin: true, credentials: true }));
 
 // Init Middleware
-app.use(express.json({ extended: false }));
+app.use(express.static(path.join(__dirname, './client/build')));
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
 
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', './client/public/index.html'));
+});
 
 // use Routes
 app.use('/api/articles', articles);
