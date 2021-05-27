@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "CISE SEEDS Team 18 Repository",
   "main": "server.js",
-  "proxy": "http://localhost:5000",
   "scripts": {
-    "build": "cd client && npm run build",
+    "lint":"eslint",
     "install-client": "cd client && npm install && npm install --prefix client",
     "heroku-postbuild": "npm run install-client && npm run build",
     "server": "node server.js",
@@ -35,8 +34,13 @@
     "url": "git+https://github.com/FelixNiu/SEEDSTeam18.git"
   },
   "keywords": [],
+  "engines": {
+    "node": "v14.16.0"
+  },
   "bugs": {
     "url": "https://github.com/FelixNiu/SEEDSTeam18/issues"
   },
-  "homepage": "https://github.com/FelixNiu/SEEDSTeam18#readme"
+  "homepage": "https://github.com/FelixNiu/SEEDSTeam18#readme",
+  "proxy": "http://localhost:5000"
+
 }
