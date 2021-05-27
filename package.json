@@ -4,6 +4,7 @@
   "description": "CISE SEEDS Team 18 Repository",
   "main": "server.js",
   "scripts": {
+    "build": "cd client && npm run build",
     "lint":"eslint",
     "install-client": "cd client && npm install && npm install --prefix client",
     "heroku-postbuild": "npm run install-client && npm run build",
