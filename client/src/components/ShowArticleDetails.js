@@ -79,8 +79,8 @@ class showArticleDetails extends Component {
           </tr>
           <tr>
             <th scope="row">6</th>
-            <td>Reasearch Method</td>
-            <td>{ article.reasearch_method }</td>
+            <td>Claim</td>
+            <td>{ article.claims }</td>
           </tr>
         </tbody>
       </table>

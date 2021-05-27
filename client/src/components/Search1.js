@@ -361,7 +361,7 @@ function ArticleSearch() {
       },
       {
         Header: "Claim",
-        accessor: "claim",
+        accessor: "claims",
         filter: "fuzzyText", // accessor is the "key" in the data
       },
     ],

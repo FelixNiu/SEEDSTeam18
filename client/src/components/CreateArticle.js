@@ -13,7 +13,7 @@ class CreateArticle extends Component {
       published_date:'',
       credibity_rating:'',
       SE_method: '',
-      claim:''
+      claims:''
     };
   }
 
@@ -30,7 +30,7 @@ class CreateArticle extends Component {
       published_date: this.state.published_date,
       credibity_rating: this.state.credibity_rating,
       SE_method: this.state.SE_method,
-      claim: this.state.claim
+      claims: this.state.claims
     };
 
     axios
@@ -42,7 +42,7 @@ class CreateArticle extends Component {
           published_date:'',
           credibity_rating:'',
           SE_method: '',
-         claim:''
+         claims:''
         })
         this.props.history.push('/');
       })
@@ -133,7 +133,7 @@ class CreateArticle extends Component {
                     placeholder='Claim'
                     name='claim'
                     className='form-control'
-                    value={this.state.claim}
+                    value={this.state.claims}
                     onChange={this.onChange}
                   />
                 </div>

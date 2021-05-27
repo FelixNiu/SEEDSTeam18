@@ -145,10 +145,10 @@ class UpdateArticleInfo extends Component {
             <div className='form-group'>
               <input
                 type='text'
-                placeholder='Reasearch method'
-                name='reasearch_method'
+                placeholder='Claims'
+                name='claims'
                 className='form-control'
-                value={this.state.reasearch_method}
+                value={this.state.claims}
                 onChange={this.onChange}
               />
             </div>
