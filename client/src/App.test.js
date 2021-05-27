@@ -1,8 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+import CreateArticle from './components/createarticle';
+ 
+describe('CreateArticle', () => {
+  test('renders App component', () => {
+    render(<App />);
+  screen.debug();
+    expect(screen.getByText('Search')).toBeInTheDocument();
+  });
+});
+
+
+test('Article List in toBeInTheDocument', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  //screen.debug();
+  const linkElement = screen.getByText("Article List");
   expect(linkElement).toBeInTheDocument();
 });
