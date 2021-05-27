@@ -12,7 +12,7 @@ class UpdateArticleInfo extends Component {
       published_date:'',
       credibity_rating:'',
       SE_method: '',
-      reasearch_method:''
+      claims:''
     };
   }
 
